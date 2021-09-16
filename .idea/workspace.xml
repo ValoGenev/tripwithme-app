@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="afae0e6c-2adc-4f55-b598-46f3cc7100d4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tripwithme: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tripwithme: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tripwithme: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1xdefq0lLSdUyvKK0NBfYKxfpKK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/app" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\seasi\Desktop\valo-kursova\tripwithme\src\main\java\app" />
+      <recent name="C:\Users\seasi\Desktop\valo-kursova\tripwithme\src\main\java\app\exception" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ApplicationStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tripwithme" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.ApplicationStarter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApplicationStarter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afae0e6c-2adc-4f55-b598-46f3cc7100d4" name="Default Changelist" comment="" />
+      <created>1630689498551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630689498551</updated>
+      <workItem from="1630689502812" duration="706000" />
+      <workItem from="1630746704009" duration="1920000" />
+      <workItem from="1630838613959" duration="63000" />
+      <workItem from="1630912020599" duration="26788000" />
+      <workItem from="1631005434490" duration="15489000" />
+      <workItem from="1631088608621" duration="16715000" />
+      <workItem from="1631117899827" duration="717000" />
+      <workItem from="1631192344772" duration="7241000" />
+      <workItem from="1631517233081" duration="23936000" />
+      <workItem from="1631604957473" duration="22959000" />
+      <workItem from="1631694968392" duration="21294000" />
+      <workItem from="1631728542326" duration="4207000" />
+      <workItem from="1631776673843" duration="10496000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="181" key="#Project_Structure" timestamp="1630920622869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="181" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630920622869" />
+    <state x="552" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1630920677105">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630920677105" />
+    <state x="729" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631112371359">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="729" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631112371359" />
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1631786012055">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631786012055" />
+    <state x="784" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1631198607617">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="784" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631198607617" />
+    <state x="761" y="388" width="398" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1631089074321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="761" y="388" width="398" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1631089074321" />
+    <state x="134" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1631523907110">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="134" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631523907110" />
+    <state x="720" y="108" key="Diagram.Print.Preview.Dialog" timestamp="1631106156906">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="108" key="Diagram.Print.Preview.Dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631106156906" />
+    <state x="740" y="252" key="FileChooserDialogImpl" timestamp="1631199109549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1631199109549" />
+    <state width="1860" height="224" key="GridCell.Tab.0.bottom" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.0.center" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.0.left" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.0.right" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.1.bottom" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.1.center" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.1.left" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="224" key="GridCell.Tab.1.right" timestamp="1631787442014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="224" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1630921592542">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1630921592542" />
+    <state x="533" y="228" key="SettingsEditor" timestamp="1631117785602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="533" y="228" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1631117785602" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1631777012787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631777012787" />
+    <state x="702" y="145" key="refactoring.ChangeSignatureDialog" timestamp="1630948039651">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="145" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630948039651" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1631526609874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631526609874" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/app/dto/user/CreateUserDto.java</url>
+          <line>15</line>
+          <properties field="fullName" class="app.dto.user.CreateUserDto" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
