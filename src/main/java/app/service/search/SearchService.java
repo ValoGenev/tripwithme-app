@@ -83,7 +83,6 @@ public class SearchService implements ISearchService {
     public SearchEntity update(SearchEntity search, String id) throws ServiceException, SearchNotFoundException {
         LOGGER.info(format(UPDATE_SEARCH_BY_ID_MESSAGE, search.getId()));
 
-        MessageAllPropertiesDto messageAllPropertiesDto = new MessageAllPropertiesDto();
 
         SearchEntity searchInDb  = findSearchById(id);
         search.setId(search.getId());

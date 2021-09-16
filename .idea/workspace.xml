@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afae0e6c-2adc-4f55-b598-46f3cc7100d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/exception/declarations/trip/CannotUpdateTripWithPassengersException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/TODO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/trip/TripDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/trip/TripDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/trip/UpdateTripDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/trip/UpdateTripDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entity/TripEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entity/TripEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/exception/declarations/trip/DriverCannotBeChangedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/exception/handlers/TripExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/exception/handlers/TripExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/search/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/search/SearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/service/trip/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/trip/TripService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/util/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/dto/trip/TripDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/dto/trip/TripDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/entity/TripEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/entity/TripEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/exception/handlers/TripExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/exception/handlers/TripExceptionHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/service/trip/TripService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/trip/TripService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/util/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/util/Constants.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +169,7 @@
       <workItem from="1631604957473" duration="22959000" />
       <workItem from="1631694968392" duration="21294000" />
       <workItem from="1631728542326" duration="4207000" />
-      <workItem from="1631776673843" duration="24026000" />
+      <workItem from="1631776673843" duration="29841000" />
     </task>
     <servers />
   </component>
@@ -194,10 +189,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631112371359" />
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1631804696530">
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1631814205838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631804696530" />
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631814205838" />
     <state x="784" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1631198607617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -222,38 +217,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1631199109549" />
-    <state width="1860" height="344" key="GridCell.Tab.0.bottom" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.0.bottom" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.0.center" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
+    <state width="1877" height="402" key="GridCell.Tab.0.center" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.0.left" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
+    <state width="1877" height="402" key="GridCell.Tab.0.left" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.0.right" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
+    <state width="1877" height="402" key="GridCell.Tab.0.right" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
+    <state width="1877" height="402" key="GridCell.Tab.1.bottom" timestamp="1631814945996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.1.center" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945996" />
+    <state width="1877" height="402" key="GridCell.Tab.1.center" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.1.left" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
+    <state width="1877" height="402" key="GridCell.Tab.1.left" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
-    <state width="1860" height="344" key="GridCell.Tab.1.right" timestamp="1631804205833">
+    <state width="1877" height="402" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
+    <state width="1877" height="402" key="GridCell.Tab.1.right" timestamp="1631814945995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1877" height="402" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631814945995" />
     <state width="1860" height="344" key="GridCell.Tab.2.bottom" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -296,7 +291,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/app/service/trip/TripService.java</url>
-          <line>291</line>
+          <line>316</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

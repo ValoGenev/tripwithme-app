@@ -6,6 +6,7 @@ import app.dto.notification.NotificationAllPropertiesDto;
 import app.dto.rating.RatingAllPropertiesDto;
 import app.dto.search.SearchAllPropertiesDto;
 import app.dto.trip.TripAllPropertiesDto;
+import app.exception.declarations.trip.OneTripPerTimePeriodException;
 
 import java.util.List;
 
@@ -88,7 +89,7 @@ public interface Constants {
     String NO_SEATS_AVAILABLE_MESSAGE = "No more seats available for trip with id [%s]";
     String PASSENGER_ALREADY_EXISTING_MESSAGE = "Passenger is already on the trip";
     String CANNOT_UPDATE_TRIP_WITH_PASSENGERS_MESSAGE = "Cannot change mandatory properties like cities,departure time,full_route,price while there are passengers assigned to trip with id [%s]";
-
+    String ONE_TRIP_PER_TIME_PERIOD_MESSAGE = "Trip period of time overlaps other user trips";
 
     // USER EXCEPTIONS CONSTANTS
     String USER_NOT_FOUND_MESSAGE = "Cannot find USER with id [%s].";

@@ -3,6 +3,7 @@ package app.service.trip;
 import app.dto.message.MessageAllPropertiesDto;
 import app.dto.trip.CreateTripDto;
 import app.dto.trip.TripAllPropertiesDto;
+import app.dto.trip.TripDto;
 import app.dto.trip.UpdateTripDto;
 import app.dto.user.UserAllPropertiesDto;
 import app.entity.CarEntity;
@@ -16,6 +17,8 @@ import app.exception.declarations.trip.*;
 import app.repository.ITripRepository;
 
 import app.service.user.IUserService;
+import org.hibernate.sql.Update;
+import org.joda.time.Interval;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +27,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -96,6 +100,7 @@ public class TripService implements ITripService {
 
         assertDriverNotAsPassenger(passengers, driver.getId());
         assertDistinctPassengers(passengers);
+        assertDriverHasOneTripAtTheSameTimePeriod(trip, driver);
 
         TripEntity tripToBeCreated = modelMapper.map(trip, TripEntity.class);
 
@@ -109,10 +114,30 @@ public class TripService implements ITripService {
 
         TripAllPropertiesDto createdTrip = modelMapper.map(createTrip(tripToBeCreated), TripAllPropertiesDto.class);
 
+
         //TODO In a new thread -> get the trip full_route ,time and seats left
         // and check if they match any searches. if yes -> notify searchers
 
         return createdTrip;
+    }
+
+    private void assertDriverHasOneTripAtTheSameTimePeriod(TripDto trip, UserEntity driver) {
+        List<TripEntity> driverTrips = new ArrayList<>();
+        driverTrips.addAll(driver.getTripsAsPassenger());
+        driverTrips.addAll(driver.getTripsAsDriver());
+
+        LocalDateTime startDate = trip.getStartTime();
+        LocalDateTime endTDate = trip.getEndTime();
+
+        driverTrips.forEach(t -> {
+            LocalDateTime tripsStartDate = t.getStartTime();
+            LocalDateTime tripsEndDate = t.getEndTime();
+
+            if ((startDate.compareTo(tripsStartDate) >= 0 && startDate.compareTo(tripsEndDate) <= 0) ||
+                    (endTDate.compareTo(tripsStartDate) >= 0 && endTDate.compareTo(tripsEndDate) <=0)){
+                throw new OneTripPerTimePeriodException(ONE_TRIP_PER_TIME_PERIOD_MESSAGE);
+            }
+        });
     }
 
     @Override
@@ -296,7 +321,7 @@ public class TripService implements ITripService {
                 || !tripInDb.getRouteStartingPoint().equals(tripToBeUpdated.getRouteStartingPoint())
                 || !tripInDb.getRouteEndPoint().equals(tripToBeUpdated.getRouteEndPoint())) {
 
-            throw new CannotUpdateTripWithPassengersException(format(CANNOT_UPDATE_TRIP_WITH_PASSENGERS_MESSAGE,tripInDb.getId()));
+            throw new CannotUpdateTripWithPassengersException(format(CANNOT_UPDATE_TRIP_WITH_PASSENGERS_MESSAGE, tripInDb.getId()));
         }
     }
 

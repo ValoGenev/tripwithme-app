@@ -125,4 +125,12 @@ public class TripExceptionHandler {
         return status(BAD_REQUEST).body(new ErrorMessage(exception.getMessage(), BAD_REQUEST.value()));
     }
 
+
+    @ExceptionHandler(OneTripPerTimePeriodException.class)
+    public ResponseEntity<ErrorMessage> handleOneTripPerTimePeriodException(OneTripPerTimePeriodException exception) {
+        LOGGER.error(BAD_REQUEST_MESSAGE, exception);
+
+        return status(BAD_REQUEST).body(new ErrorMessage(exception.getMessage(), BAD_REQUEST.value()));
+    }
+
 }
