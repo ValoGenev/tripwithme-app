@@ -19,4 +19,6 @@ public class UpdateTripDto extends TripDto {
 
     private CarDto car;
 
+
+
 }

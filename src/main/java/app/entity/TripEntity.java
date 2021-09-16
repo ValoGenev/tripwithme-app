@@ -48,9 +48,6 @@ public class TripEntity {
     @Column(name = "seats")
     private int seats;
 
-    @Column(name = "seats_left")
-    private int seatsLeft;
-
     @Column(name = "description")
     private String description;
 
@@ -195,14 +192,6 @@ public class TripEntity {
 
     public void setApplicants(List<TripApplicationEntity> applicants) {
         this.applicants = applicants;
-    }
-
-    public int getSeatsLeft() {
-        return seatsLeft;
-    }
-
-    public void setSeatsLeft(int seatsLeft) {
-        this.seatsLeft = seatsLeft;
     }
 
     public void setPassengers(List<UserEntity> passengers) {

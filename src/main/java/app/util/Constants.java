@@ -12,7 +12,6 @@ import java.util.List;
 public interface Constants {
 
 
-
     // USERS CONSTANTS
     String FIND_USER_BY_ID_MESSAGE = "FINDING USER with ID: [%s].";
     String CREATE_USER_MESSAGE = "CREATING USER with USERNAME: [%s].";
@@ -22,11 +21,11 @@ public interface Constants {
     String GET_USER_TRIPS_MESSAGE = "GETTING TRIPS from USER with ID: [%s].";
     String GET_USER_SEARCHES_MESSAGE = "GETTING SEARCHES from USER with ID: [%s].";
     String GET_USER_CARS_MESSAGE = "Getting cars from user with id: [%s]";
-    String GET_USER_APPLICATIONS_MESSAGE="Getting applications from user with id [%s]";
+    String GET_USER_APPLICATIONS_MESSAGE = "Getting applications from user with id [%s]";
     String GET_USER_TRIPS_AS_DRIVER_MESSAGE = "Getting trips as driver from user with id: [%s]";
-    String GET_USER_TRIPS_AS_PASSENGER_MESSAGE="Getting trips as passenger from user with id [%s]";
-    String GET_USER_NOTIFICATIONS_MESSAGE="Getting notifications from user with id [%s]";
-    String GET_USER_RATINGS_MESSAGE="Getting ratings from user with id [%s]";
+    String GET_USER_TRIPS_AS_PASSENGER_MESSAGE = "Getting trips as passenger from user with id [%s]";
+    String GET_USER_NOTIFICATIONS_MESSAGE = "Getting notifications from user with id [%s]";
+    String GET_USER_RATINGS_MESSAGE = "Getting ratings from user with id [%s]";
     String CREATE_USER_BOT_MESSAGE = "CREATING BOT USER with USERNAME: [%s].";
 
     // CARS CONSTANTS
@@ -50,10 +49,10 @@ public interface Constants {
     String DELETE_TRIP_BY_ID_MESSAGE = "DELETING TRIP with ID: [%s].";
     String GET_ALL_TRIPS_MESSAGE = "GETTING ALL TRIPS.";
     String ADD_PASSENGER_MESSAGE = "ADDING USER [%s] TO TRIP [%s]";
-    String REMOVE_PASSENGER_MESSAGE = "ADDING USER [%s] TO TRIP [%s]";
-    String GET_TRIP_MESSAGES_MESSAGE="GETTING TRIP [%s] messages";
-    String GET_TRIP_APPLICATIONS_MESSAGE="GETTING TRIP [%s] applications";
-    String GET_TRIP_PASSENGERS_MESSAGE="Getting trip [%s] passengers";
+    String REMOVE_PASSENGER_MESSAGE = "REMOVING USER [%s] TO TRIP [%s]";
+    String GET_TRIP_MESSAGES_MESSAGE = "GETTING TRIP [%s] messages";
+    String GET_TRIP_APPLICATIONS_MESSAGE = "GETTING TRIP [%s] applications";
+    String GET_TRIP_PASSENGERS_MESSAGE = "Getting trip [%s] passengers";
 
     // MESSAGE CONSTANTS
     String FIND_MESSAGE_BY_ID_MESSAGE = "FINDING MESSAGE with ID: [%s].";
@@ -86,19 +85,19 @@ public interface Constants {
     // TRIP EXCEPTIONS CONSTANTS
     String TRIP_NOT_FOUND_MESSAGE = "Cannot find TRIP with ID [%s].";
     String DRIVER_AS_PASSENGER_MESSAGE = "Driver cannot be set as passenger";
-    String NO_SEATS_AVAILABLE_MESSAGE="No more seats available for trip with id [%s]";
-    String DRIVER_CANNOT_BE_CHANGED_MESSAGE="Driver cannot be changed";
+    String NO_SEATS_AVAILABLE_MESSAGE = "No more seats available for trip with id [%s]";
     String PASSENGER_ALREADY_EXISTING_MESSAGE = "Passenger is already on the trip";
+    String CANNOT_UPDATE_TRIP_WITH_PASSENGERS_MESSAGE = "Cannot change mandatory properties like cities,departure time,full_route,price while there are passengers assigned to trip with id [%s]";
 
 
     // USER EXCEPTIONS CONSTANTS
     String USER_NOT_FOUND_MESSAGE = "Cannot find USER with id [%s].";
 
     // SEARCH EXCEPTIONS CONSTANTS
-    String SEARCH_NOT_FOUND_MESSAGE="Cannot find SEARCH with id [%s].";
+    String SEARCH_NOT_FOUND_MESSAGE = "Cannot find SEARCH with id [%s].";
 
     // CAR EXCEPTIONS CONSTANTS
-    String CAR_NOT_FOUND_MESSAGE="Cannot find CAR with id [%s].";
+    String CAR_NOT_FOUND_MESSAGE = "Cannot find CAR with id [%s].";
 
     // MESSAGE EXCEPTIONS CONSTANTS
     String MESSAGE_NOT_FOUND_MESSAGE = "Cannot find MESSAGE with id [%s].";
@@ -107,10 +106,10 @@ public interface Constants {
     String NOTIFICATION_NOT_FOUND_MESSAGE = "Cannot find MESSAGE with id [%s]";
 
     //TRIP_APPLICATION EXCEPTIONS CONSTANTS
-    String TRIP_APPLICATION_NOT_FOUND_MESSAGE="Cannot find TRIP_APPLICATION with id [%s]";
+    String TRIP_APPLICATION_NOT_FOUND_MESSAGE = "Cannot find TRIP_APPLICATION with id [%s]";
 
     //RATING EXCEPTIONS CONSTANTS
-    String RATING_NOT_FOUND_MESSAGE="Cannot find RATING with id [%s]";
+    String RATING_NOT_FOUND_MESSAGE = "Cannot find RATING with id [%s]";
 
     // COMMON EXCEPTIONS CONSTANTS
     String DATABASE_ERROR_MESSAGE = "Database error occurred.";
@@ -125,6 +124,6 @@ public interface Constants {
     String EMAIL_NOT_EQUAL_MESSAGE = "Email cannot be changed.";
     String ROLE_NOT_EQUAL_MESSAGE = "Role cannot be changed.";
     String EMAIL_NOT_FOUND_MESSAGE = "Email [%s] was not found";
-    String EXISTING_EMAIL_MESSAGE="Email [%s] already exists.";
+    String EXISTING_EMAIL_MESSAGE = "Email [%s] already exists.";
 
 }

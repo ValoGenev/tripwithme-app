@@ -83,13 +83,6 @@ public class TripExceptionHandler {
         return status(NOT_FOUND).body(new ErrorMessage(exception.getMessage(), NOT_FOUND.value()));
     }
 
-    @ExceptionHandler(DriverCannotBeChangedException.class)
-    public ResponseEntity<ErrorMessage> handleDriverCannotBeChangedException(DriverCannotBeChangedException exception) {
-        LOGGER.error(BAD_REQUEST_MESSAGE, exception);
-
-        return status(BAD_REQUEST).body(new ErrorMessage(exception.getMessage(), BAD_REQUEST.value()));
-    }
-
     @ExceptionHandler(DriverCannotBePassengerException.class)
     public ResponseEntity<ErrorMessage> handleDriverCannotBePassengerException(DriverCannotBePassengerException exception) {
         LOGGER.error(BAD_REQUEST_MESSAGE, exception);
@@ -120,6 +113,13 @@ public class TripExceptionHandler {
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<ErrorMessage> handleHttpMessageNotReadableException(HttpMessageNotReadableException exception) {
+        LOGGER.error(BAD_REQUEST_MESSAGE, exception);
+
+        return status(BAD_REQUEST).body(new ErrorMessage(exception.getMessage(), BAD_REQUEST.value()));
+    }
+
+    @ExceptionHandler(CannotUpdateTripWithPassengersException.class)
+    public ResponseEntity<ErrorMessage> handleCannotUpdateWithPassengersException(CannotUpdateTripWithPassengersException exception) {
         LOGGER.error(BAD_REQUEST_MESSAGE, exception);
 
         return status(BAD_REQUEST).body(new ErrorMessage(exception.getMessage(), BAD_REQUEST.value()));

@@ -7,12 +7,10 @@ import app.validations.time.ValidTimeFrame;
 import app.validations.groups.FieldChecks;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.*;
+import org.hibernate.validator.constraints.Range;
 
 import javax.validation.GroupSequence;
-import javax.validation.constraints.Future;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Null;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import javax.validation.groups.Default;
 
 import java.time.LocalDateTime;
@@ -31,7 +29,6 @@ public class TripDto {
     @Null(message = "id should be null")
     private String id;
 
-    @Null(message = "time posted cannot be set")
     private LocalDateTime timePosted;
 
     @NotNull(groups = {FieldChecks.class})
@@ -53,9 +50,9 @@ public class TripDto {
     @Size(min = 2,max = 10,message = "full route size must be between 2 and 10")
     private List<City> fullRoute;
 
+    @Min(value = 0,message = "seats cannot be negative number")
+    @Max(value = 10,message = "seats cannot be more then 10")
     private int seats;
-
-    private int seatsLeft;
 
     private int price;
 

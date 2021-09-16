@@ -3,7 +3,6 @@ package app.service.trip;
 import app.dto.message.MessageAllPropertiesDto;
 import app.dto.trip.CreateTripDto;
 import app.dto.trip.TripAllPropertiesDto;
-import app.dto.trip.TripDto;
 import app.dto.trip.UpdateTripDto;
 import app.dto.user.UserAllPropertiesDto;
 import app.entity.CarEntity;
@@ -98,9 +97,6 @@ public class TripService implements ITripService {
         assertDriverNotAsPassenger(passengers, driver.getId());
         assertDistinctPassengers(passengers);
 
-        //TODO In a new thread -> get the trip full_route ,time and seats left
-        //TODO and check if they match any searches. if yes -> notify searchers
-
         TripEntity tripToBeCreated = modelMapper.map(trip, TripEntity.class);
 
         tripToBeCreated.setCar(car);
@@ -111,7 +107,12 @@ public class TripService implements ITripService {
 
         tripToBeCreated.setTimePosted(LocalDateTime.now().withNano(0));
 
-        return modelMapper.map(createTrip(tripToBeCreated), TripAllPropertiesDto.class);
+        TripAllPropertiesDto createdTrip = modelMapper.map(createTrip(tripToBeCreated), TripAllPropertiesDto.class);
+
+        //TODO In a new thread -> get the trip full_route ,time and seats left
+        // and check if they match any searches. if yes -> notify searchers
+
+        return createdTrip;
     }
 
     @Override
@@ -124,14 +125,24 @@ public class TripService implements ITripService {
 
         TripEntity tripToBeUpdated = modelMapper.map(trip, TripEntity.class);
 
+        assertMandatoryValuesWithExistingPassengersNotChanged(tripInDb, tripToBeUpdated);
+
         tripToBeUpdated.setId(tripInDb.getId());
         tripToBeUpdated.setCar(carInDb);
         tripToBeUpdated.setDriver(driver);
         tripToBeUpdated.setPassengers(tripInDb.getPassengers());
         tripToBeUpdated.setApplicants(tripInDb.getApplicants());
         tripToBeUpdated.setMessages(tripInDb.getMessages());
+        tripToBeUpdated.setTimePosted(tripInDb.getTimePosted());
 
-        return modelMapper.map(createTrip(tripToBeUpdated), TripAllPropertiesDto.class);
+        TripAllPropertiesDto updatedTrip = modelMapper.map(createTrip(tripToBeUpdated), TripAllPropertiesDto.class);
+
+        //TODO In a new thread -> get the trip full_route ,time and seats left
+        // and check if they match any searches. if yes -> notify searchers
+        // recheck applicants and filter them out those who dont match new conditions
+        // ?? not sure if i have to delete notifications
+
+        return updatedTrip;
     }
 
 
@@ -195,25 +206,48 @@ public class TripService implements ITripService {
         assertNotExistingPassengerSeats(tripInDb);
 
         tripInDb.getPassengers().add(userInDb);
-        tripInDb.setSeatsLeft(tripInDb.getSeatsLeft() - 1);
+        tripInDb.setSeats(tripInDb.getSeats() - 1);
 
         assertDriverNotAsPassenger(tripInDb.getPassengers(), tripInDb.getDriver().getId());
         assertDistinctPassengers(tripInDb.getPassengers());
 
         createTrip(tripInDb);
+
+        //TODO send notification to applicant that he was approved
     }
 
     @Override
     public void removePassenger(String tripId, String userId) {
+        //TODO check if tripId.getDriver() is equal to loggedInUser
+
         LOGGER.info(format(REMOVE_PASSENGER_MESSAGE, userId, tripId));
 
         TripEntity tripInDb = findTripById(tripId);
         UserEntity userInDb = userService.findUserById(userId);
 
         if (tripInDb.getPassengers().remove(userInDb)) {
-            tripInDb.setSeatsLeft(tripInDb.getSeatsLeft() + 1);
+            tripInDb.setSeats(tripInDb.getSeats() + 1);
             createTrip(tripInDb);
+            //TODO send notification to passenger for being removed
         }
+
+
+    }
+
+    public void leaveTrip(String tripId, String userId) {
+        //TODO check if userId is equal to loggedInUser
+
+        LOGGER.info(format("User [%s] leaving trip with id [%s]", userId, tripId));
+
+        TripEntity tripInDb = findTripById(tripId);
+        UserEntity userInDb = userService.findUserById(userId);
+
+        if (tripInDb.getPassengers().remove(userInDb)) {
+            tripInDb.setSeats(tripInDb.getSeats() + 1);
+            createTrip(tripInDb);
+            //TODO send notification to driver
+        }
+
     }
 
     @Override
@@ -253,15 +287,22 @@ public class TripService implements ITripService {
         });
     }
 
-    private void assertNotExistingPassengerSeats(TripEntity trip) {
-        if (trip.getSeatsLeft() == 0) {
-            throw new NoMoreSeatsAvailableException(format(NO_SEATS_AVAILABLE_MESSAGE, trip.getId()));
+    private void assertMandatoryValuesWithExistingPassengersNotChanged(TripEntity tripInDb, TripEntity tripToBeUpdated) {
+
+        if (!tripInDb.getStartTime().equals(tripToBeUpdated.getStartTime())
+                || !tripInDb.getEndTime().equals(tripToBeUpdated.getEndTime())
+                || tripInDb.getPrice() != tripToBeUpdated.getPrice()
+                || tripInDb.getFullRoute().size() != tripToBeUpdated.getFullRoute().size()
+                || !tripInDb.getRouteStartingPoint().equals(tripToBeUpdated.getRouteStartingPoint())
+                || !tripInDb.getRouteEndPoint().equals(tripToBeUpdated.getRouteEndPoint())) {
+
+            throw new CannotUpdateTripWithPassengersException(format(CANNOT_UPDATE_TRIP_WITH_PASSENGERS_MESSAGE,tripInDb.getId()));
         }
     }
 
-    private void assertDriverNotChanged(String driver1Id, String driver2Id) {
-        if (!driver1Id.equals(driver2Id)) {
-            throw new DriverCannotBeChangedException(DRIVER_CANNOT_BE_CHANGED_MESSAGE);
+    private void assertNotExistingPassengerSeats(TripEntity trip) {
+        if (trip.getSeats() == 0) {
+            throw new NoMoreSeatsAvailableException(format(NO_SEATS_AVAILABLE_MESSAGE, trip.getId()));
         }
     }
 

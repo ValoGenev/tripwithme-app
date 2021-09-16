@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afae0e6c-2adc-4f55-b598-46f3cc7100d4" name="Default Changelist" comment="" />
+    <list default="true" id="afae0e6c-2adc-4f55-b598-46f3cc7100d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/exception/declarations/trip/CannotUpdateTripWithPassengersException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/TODO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/trip/TripDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/trip/TripDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/dto/trip/UpdateTripDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/dto/trip/UpdateTripDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/entity/TripEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entity/TripEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/exception/declarations/trip/DriverCannotBeChangedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/exception/handlers/TripExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/exception/handlers/TripExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/trip/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/trip/TripService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/dto/trip/TripDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/dto/trip/TripDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/entity/TripEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/entity/TripEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/exception/handlers/TripExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/exception/handlers/TripExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/trip/TripService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/trip/TripService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +78,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -70,6 +89,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1xdefq0lLSdUyvKK0NBfYKxfpKK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -82,6 +102,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/app" />
@@ -153,7 +174,7 @@
       <workItem from="1631604957473" duration="22959000" />
       <workItem from="1631694968392" duration="21294000" />
       <workItem from="1631728542326" duration="4207000" />
-      <workItem from="1631776673843" duration="10496000" />
+      <workItem from="1631776673843" duration="24026000" />
     </task>
     <servers />
   </component>
@@ -173,10 +194,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631112371359" />
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1631786012055">
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1631804696530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631786012055" />
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631804696530" />
     <state x="784" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1631198607617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -189,6 +210,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="134" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631523907110" />
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631790376279">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631790376279" />
     <state x="720" y="108" key="Diagram.Print.Preview.Dialog" timestamp="1631106156906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -197,38 +222,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="252" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1631199109549" />
-    <state width="1860" height="224" key="GridCell.Tab.0.bottom" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.0.bottom" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.0.center" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.0.center" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.0.left" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.0.left" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.0.right" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.0.right" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.1.bottom" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.1.center" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.1.center" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.1.left" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.1.left" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
-    <state width="1860" height="224" key="GridCell.Tab.1.right" timestamp="1631787442014">
+    <state width="1860" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.1.right" timestamp="1631804205833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="224" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631787442014" />
+    <state width="1860" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.2.bottom" timestamp="1631804205833">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="344" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.2.center" timestamp="1631804205833">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="344" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.2.left" timestamp="1631804205833">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="344" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
+    <state width="1860" height="344" key="GridCell.Tab.2.right" timestamp="1631804205833">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="344" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631804205833" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1630921592542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,11 +294,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/app/dto/user/CreateUserDto.java</url>
-          <line>15</line>
-          <properties field="fullName" class="app.dto.user.CreateUserDto" />
-          <option name="timeStamp" value="1" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/app/service/trip/TripService.java</url>
+          <line>291</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
