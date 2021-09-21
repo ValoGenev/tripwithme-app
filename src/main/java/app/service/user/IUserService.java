@@ -9,6 +9,7 @@ import app.dto.trip.TripAllPropertiesDto;
 import app.dto.user.CreateBotUserDto;
 import app.dto.user.CreateUserDto;
 import app.dto.user.UserAllPropertiesDto;
+import app.dto.user.UserDto;
 import app.entity.NotificationEntity;
 import app.entity.UserEntity;
 import app.exception.declarations.common.ServiceException;
@@ -24,9 +25,9 @@ public interface IUserService {
 
     void delete(String id) throws ServiceException;
 
-    UserAllPropertiesDto create(CreateUserDto user) throws  ServiceException;
+    UserAllPropertiesDto create(UserDto user) throws  ServiceException;
 
-    UserAllPropertiesDto update(CreateUserDto user, String id) throws ServiceException,UserNotFoundException;
+    UserAllPropertiesDto update(UserDto user, String id) throws ServiceException,UserNotFoundException;
 
     UserEntity findUserById(String id) throws UserNotFoundException;
 

@@ -17,12 +17,9 @@ import app.service.trip.ITripService;
 import app.service.trip.TripService;
 import app.service.user.IUserService;
 import app.service.user.UserService;
-import net.bytebuddy.asm.Advice;
-import org.apache.catalina.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -64,7 +61,7 @@ public class SpringConfiguration {
 
     @Bean
     public ISearchService searchService(){
-        return new SearchService(searchRepository,modelMapper());
+        return new SearchService(searchRepository, userService(), modelMapper());
     }
 
     @Bean
@@ -74,7 +71,7 @@ public class SpringConfiguration {
 
     @Bean
     public IApplicationService applicationService(){
-        return new ApplicationService(applicationRepository,userService(),tripService(),modelMapper());
+        return new ApplicationService(applicationRepository,userService(),tripService(),searchService(),modelMapper());
     }
 
     @Bean

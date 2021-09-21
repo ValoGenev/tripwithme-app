@@ -9,6 +9,7 @@ import app.dto.trip.TripAllPropertiesDto;
 import app.dto.user.CreateBotUserDto;
 import app.dto.user.CreateUserDto;
 import app.dto.user.UserAllPropertiesDto;
+import app.dto.user.UserDto;
 import app.entity.UserEntity;
 import app.service.user.IUserService;
 import org.slf4j.Logger;
@@ -54,7 +55,7 @@ public class UserController {
     }
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserAllPropertiesDto> create(@Valid @RequestBody CreateUserDto user) {
+    public ResponseEntity<UserAllPropertiesDto> create(@Valid @RequestBody UserDto user) {
         LOGGER.info(format(CREATE_USER_MESSAGE, user.getFullName()));
         return status(CREATED).body(userService.create(user));
     }
@@ -73,7 +74,7 @@ public class UserController {
     }
 
     @PutMapping(value = "/{id}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserAllPropertiesDto> update(@Valid @RequestBody CreateUserDto user, @PathVariable("id") String id) {
+    public ResponseEntity<UserAllPropertiesDto> update(@Valid @RequestBody UserDto user, @PathVariable("id") String id) {
         LOGGER.info(format(UPDATE_USER_BY_ID_MESSAGE,id));
         return ok(userService.update(user, id));
     }

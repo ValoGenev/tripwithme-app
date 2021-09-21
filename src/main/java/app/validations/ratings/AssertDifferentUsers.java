@@ -1,4 +1,6 @@
-package app.validations.time;
+package app.validations.ratings;
+
+import app.validations.time.ValidTimeFrameValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -10,9 +12,9 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = ValidTimeFrameValidator.class)
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ValidTimeFrame  {
+public @interface AssertDifferentUsers {
 
-    String message() default "Start date must be set before end date"; //TODO add regex
+    String message() default "fromUser and toUser should be different users"; //TODO add regex
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

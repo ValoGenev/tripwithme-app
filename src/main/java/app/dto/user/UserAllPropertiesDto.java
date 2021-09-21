@@ -24,28 +24,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString(exclude={"tripsAsDriver","tripsAsPassenger","searches","cars","applications","messages","notifications","givenRatings","receivedRatings"})
-@EqualsAndHashCode(exclude = {"tripsAsDriver","tripsAsPassenger","searches","cars","applications","messages","notifications","givenRatings","receivedRatings"})
-public class UserAllPropertiesDto {
-
-    private String id;
-
-    private String fullName;
-
-    private String email;
-
-    private String phoneNumber;
-
-    private String socialId;
-
-    private String profilePic;
-
-    private String facebookProfileUrl;
-
-    private String description;
-
-    private UserRole role;
-
-    private UserType type;
+@EqualsAndHashCode(exclude = {"tripsAsDriver","tripsAsPassenger","searches","cars","applications","messages","notifications","givenRatings","receivedRatings"}, callSuper = false)
+public class UserAllPropertiesDto extends UserDto {
 
     private LocalDateTime registrationTime;
 

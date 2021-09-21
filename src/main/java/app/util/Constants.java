@@ -96,6 +96,7 @@ public interface Constants {
 
     // SEARCH EXCEPTIONS CONSTANTS
     String SEARCH_NOT_FOUND_MESSAGE = "Cannot find SEARCH with id [%s].";
+    String ONE_SEARCH_PER_TIME_PERIOD_MESSAGE = "Search period of time overlaps other user searches";
 
     // CAR EXCEPTIONS CONSTANTS
     String CAR_NOT_FOUND_MESSAGE = "Cannot find CAR with id [%s].";

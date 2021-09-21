@@ -15,24 +15,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString(exclude={"searcher","applications"})
-@EqualsAndHashCode(exclude = {"searcher","applications"})
-public class SearchAllPropertiesDto {
-
-    private String id;
-
-    private LocalDateTime timePosted;
-
-    private LocalDateTime startTime;
-
-    private LocalDateTime endTime;
-
-    private City routeStartingPoint;
-
-    private City routeEndPoint;
-
-    private int seats;
-
-    private String description;
+@EqualsAndHashCode(exclude = {"searcher","applications"}, callSuper = false)
+public class SearchAllPropertiesDto extends SearchDto {
 
     private UserDto searcher;
 

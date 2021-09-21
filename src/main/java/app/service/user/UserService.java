@@ -9,6 +9,7 @@ import app.dto.trip.TripAllPropertiesDto;
 import app.dto.user.CreateBotUserDto;
 import app.dto.user.CreateUserDto;
 import app.dto.user.UserAllPropertiesDto;
+import app.dto.user.UserDto;
 import app.entity.UserEntity;
 import app.exception.declarations.common.AlreadyExistingResourceException;
 import app.exception.declarations.common.ConflictException;
@@ -70,6 +71,7 @@ public class UserService implements IUserService {
     }
 
     @Override
+    //TODO only admin
     public void delete(String id) throws ServiceException {
         LOGGER.info(format(DELETE_USER_BY_ID_MESSAGE, id));
 
@@ -85,7 +87,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserAllPropertiesDto create(CreateUserDto user) throws ServiceException {
+    //TODO only admin
+    public UserAllPropertiesDto create(UserDto user) throws ServiceException {
         LOGGER.info(format(CREATE_USER_MESSAGE, user.getFullName()));
 
         UserEntity userToBeCreated = modelMapper.map(user,UserEntity.class);
@@ -96,7 +99,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserAllPropertiesDto update(CreateUserDto user, String id) throws ServiceException, UserNotFoundException {
+    //TODO check if user id is loggedInUser
+    public UserAllPropertiesDto update(UserDto user, String id) throws ServiceException, UserNotFoundException {
         LOGGER.info(format(UPDATE_USER_BY_ID_MESSAGE, id));
 
         UserEntity userInDb = findUserById(id);
@@ -107,6 +111,7 @@ public class UserService implements IUserService {
     }
 
     @Override
+    //TODO only admin
     public UserAllPropertiesDto createBot(CreateBotUserDto user) throws ServiceException {
         LOGGER.info(format(CREATE_USER_BOT_MESSAGE, user.getFullName()));
 

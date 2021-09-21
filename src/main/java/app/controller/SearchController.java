@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.dto.search.SearchAllPropertiesDto;
 import app.entity.SearchEntity;
 import app.entity.TripEntity;
 import app.service.search.ISearchService;
@@ -34,19 +35,19 @@ public class SearchController {
     }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<SearchEntity>> getAll() {
+    public ResponseEntity<List<SearchAllPropertiesDto>> getAll() {
         LOGGER.info(GET_ALL_SEARCHES_MESSAGE);
         return ok(searchService.findAll());
     }
 
     @GetMapping(value = "/{id}", produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<SearchEntity> getOne(@PathVariable("id") String id) {
+    public ResponseEntity<SearchAllPropertiesDto> getOne(@PathVariable("id") String id) {
         LOGGER.info(format(FIND_SEARCH_BY_ID_MESSAGE, id));
         return ok(searchService.findOneById(id));
     }
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<SearchEntity> create(@Valid @RequestBody SearchEntity search) {
+    public ResponseEntity<SearchAllPropertiesDto> create(@Valid @RequestBody SearchAllPropertiesDto search) {
         LOGGER.info(format(CREATE_SEARCH_MESSAGE, search.getDescription()));
         return status(CREATED).body(searchService.create(search));
     }
@@ -59,7 +60,7 @@ public class SearchController {
     }
 
     @PutMapping(value = "/{id}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ResponseEntity<SearchEntity> update(@Valid @RequestBody SearchEntity search, @PathVariable("id") String id) {
+    public ResponseEntity<SearchAllPropertiesDto> update(@Valid @RequestBody SearchAllPropertiesDto search, @PathVariable("id") String id) {
         LOGGER.info(format(UPDATE_SEARCH_BY_ID_MESSAGE,id));
         return ok(searchService.update(search, id));
     }

@@ -76,6 +76,7 @@ public class TripService implements ITripService {
     }
 
     @Override
+    //TODO check if trip belongs to loggedInUser
     public void delete(String id) throws ServiceException {
         LOGGER.info(format(DELETE_TRIP_BY_ID_MESSAGE, id));
 
@@ -91,6 +92,7 @@ public class TripService implements ITripService {
     }
 
     @Override
+    //TODO driver is loggedInUser
     public TripAllPropertiesDto create(CreateTripDto trip) throws ServiceException {
         LOGGER.info(format(CREATE_TRIP_MESSAGE, trip.getDescription()));
 
@@ -126,6 +128,7 @@ public class TripService implements ITripService {
         driverTrips.addAll(driver.getTripsAsPassenger());
         driverTrips.addAll(driver.getTripsAsDriver());
 
+
         LocalDateTime startDate = trip.getStartTime();
         LocalDateTime endTDate = trip.getEndTime();
 
@@ -133,14 +136,19 @@ public class TripService implements ITripService {
             LocalDateTime tripsStartDate = t.getStartTime();
             LocalDateTime tripsEndDate = t.getEndTime();
 
+
             if ((startDate.compareTo(tripsStartDate) >= 0 && startDate.compareTo(tripsEndDate) <= 0) ||
-                    (endTDate.compareTo(tripsStartDate) >= 0 && endTDate.compareTo(tripsEndDate) <=0)){
-                throw new OneTripPerTimePeriodException(ONE_TRIP_PER_TIME_PERIOD_MESSAGE);
+                    (endTDate.compareTo(tripsStartDate) >= 0 && endTDate.compareTo(tripsEndDate) <= 0)) {
+
+                if (!trip.getId().equals(t.getId())) {
+                    throw new OneTripPerTimePeriodException(ONE_TRIP_PER_TIME_PERIOD_MESSAGE);
+                }
             }
         });
     }
 
     @Override
+    //TODO check if trip belongs to loggedInUser
     public TripAllPropertiesDto update(UpdateTripDto trip, String id) throws ServiceException, TripNotFoundException {
         LOGGER.info(format(UPDATE_TRIP_BY_ID_MESSAGE, trip.getId()));
 
@@ -153,6 +161,9 @@ public class TripService implements ITripService {
         assertMandatoryValuesWithExistingPassengersNotChanged(tripInDb, tripToBeUpdated);
 
         tripToBeUpdated.setId(tripInDb.getId());
+
+        assertDriverHasOneTripAtTheSameTimePeriod(trip,driver);
+
         tripToBeUpdated.setCar(carInDb);
         tripToBeUpdated.setDriver(driver);
         tripToBeUpdated.setPassengers(tripInDb.getPassengers());
@@ -222,6 +233,7 @@ public class TripService implements ITripService {
     }
 
     @Override
+    //TODO check if trip driver is loggedInUser
     public void addPassenger(String tripId, String userId) {
         LOGGER.info(format(ADD_PASSENGER_MESSAGE, userId, tripId));
 
@@ -242,8 +254,8 @@ public class TripService implements ITripService {
     }
 
     @Override
+    //TODO check if tripId.getDriver() is equal to loggedInUser
     public void removePassenger(String tripId, String userId) {
-        //TODO check if tripId.getDriver() is equal to loggedInUser
 
         LOGGER.info(format(REMOVE_PASSENGER_MESSAGE, userId, tripId));
 

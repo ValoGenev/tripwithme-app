@@ -2,6 +2,7 @@ package app.service.rating;
 
 import app.dto.notification.NotificationAllPropertiesDto;
 import app.dto.rating.RatingAllPropertiesDto;
+import app.dto.rating.RatingDto;
 import app.entity.RatingEntity;
 import app.exception.declarations.common.ServiceException;
 import app.exception.declarations.notifcation.NotificationNotFoundException;
@@ -18,7 +19,7 @@ public interface IRatingService {
 
     RatingAllPropertiesDto create(RatingAllPropertiesDto rating) throws  ServiceException;
 
-    RatingAllPropertiesDto update(RatingAllPropertiesDto rating, String id) throws ServiceException,RatingNotFoundException;
+    RatingAllPropertiesDto update(RatingDto rating, String id) throws ServiceException,RatingNotFoundException;
 
     RatingEntity findRatingByID(String id) throws RatingNotFoundException;
 }

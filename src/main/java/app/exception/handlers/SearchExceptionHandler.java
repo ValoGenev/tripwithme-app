@@ -4,7 +4,9 @@ import app.controller.SearchController;
 import app.exception.declarations.common.AlreadyExistingResourceException;
 import app.exception.declarations.common.ConflictException;
 import app.exception.declarations.common.ServiceException;
+import app.exception.declarations.search.OneSearchPerTimeIntervalException;
 import app.exception.declarations.search.SearchNotFoundException;
+import app.exception.declarations.trip.OneTripPerTimePeriodException;
 import app.exception.declarations.trip.TripNotFoundException;
 import app.exception.utils.ErrorMessage;
 import org.slf4j.Logger;
@@ -64,11 +66,11 @@ public class SearchExceptionHandler {
         return status(CONFLICT).body(new ErrorMessage(exception.getMessage(), CONFLICT.value()));
     }
 
-    @ExceptionHandler(TripNotFoundException.class)
-    public ResponseEntity<ErrorMessage> handleResourceNotFoundException(TripNotFoundException exception) {
-        LOGGER.error(NOT_FOUND_MESSAGE, exception);
+    @ExceptionHandler(OneSearchPerTimeIntervalException.class)
+    public ResponseEntity<ErrorMessage> handleOneSearchPerTimeIntervalExceptionn(OneSearchPerTimeIntervalException exception) {
+        LOGGER.error(BAD_REQUEST_MESSAGE, exception);
 
-        return status(NOT_FOUND).body(new ErrorMessage(exception.getMessage(), NOT_FOUND.value()));
+        return status(BAD_REQUEST).body(new ErrorMessage(exception.getMessage(), BAD_REQUEST.value()));
     }
 
 }

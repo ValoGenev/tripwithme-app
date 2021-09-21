@@ -13,6 +13,7 @@ import app.exception.declarations.common.ServiceException;
 import app.repository.IApplicationRepository;
 import app.repository.ITripRepository;
 import app.service.car.CarService;
+import app.service.search.ISearchService;
 import app.service.trip.ITripService;
 import app.service.user.IUserService;
 import org.modelmapper.ModelMapper;
@@ -34,12 +35,14 @@ public class ApplicationService implements IApplicationService {
     private final IApplicationRepository applicationRepository;
     private final IUserService userService;
     private final ITripService tripService;
+    private final ISearchService searchService;
     private final ModelMapper modelMapper;
 
-    public ApplicationService(IApplicationRepository applicationRepository, IUserService userService, ITripService tripService, ModelMapper modelMapper) {
+    public ApplicationService(IApplicationRepository applicationRepository, IUserService userService, ITripService tripService,ISearchService searchService, ModelMapper modelMapper) {
         this.applicationRepository = applicationRepository;
         this.userService = userService;
         this.tripService = tripService;
+        this.searchService=searchService;
         this.modelMapper = modelMapper;
     }
 
@@ -89,9 +92,17 @@ public class ApplicationService implements IApplicationService {
 
         UserEntity userInDb = userService.findUserById(application.getUser().getId());
         TripEntity tripInDb = tripService.findTripById(application.getTrip().getId());
+        SearchEntity searchInDb = searchService.findSearchById(application.getSearch().getId());
 
         applicationToBeCreated.setUser(userInDb);
         applicationToBeCreated.setTrip(tripInDb);
+        applicationToBeCreated.setSearch(searchInDb);
+
+        //TODO assert search belongs to userInDb
+        //TODO assert user cannot apply for his own trip
+        //TODO assert search matches trip conditions
+        //TODO assert not already applied
+        //TODO notify driver for application
 
         return modelMapper.map(createTripApplication(applicationToBeCreated), ApplicationAllPropertiesDto.class);
     }

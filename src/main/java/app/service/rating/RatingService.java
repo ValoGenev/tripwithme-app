@@ -2,6 +2,7 @@ package app.service.rating;
 
 import app.dto.notification.NotificationAllPropertiesDto;
 import app.dto.rating.RatingAllPropertiesDto;
+import app.dto.rating.RatingDto;
 import app.entity.RatingEntity;
 import app.entity.SearchEntity;
 import app.entity.UserEntity;
@@ -80,6 +81,7 @@ public class RatingService implements IRatingService {
     }
 
     @Override
+    //TODO check if fromuser is equal loggedInUser
     public RatingAllPropertiesDto create(RatingAllPropertiesDto rating) throws ServiceException {
         LOGGER.info(format(CREATE_RATING_MESSAGE, rating.getComment()));
 
@@ -91,11 +93,14 @@ public class RatingService implements IRatingService {
         ratingToBeCreated.setFromUser(fromUser);
         ratingToBeCreated.setToUser(toUser);
 
+
+        //TODO create and send notification to toUser
+
         return modelMapper.map(createRating(ratingToBeCreated),RatingAllPropertiesDto.class);
     }
 
     @Override
-    public RatingAllPropertiesDto update(RatingAllPropertiesDto rating, String id) throws ServiceException, RatingNotFoundException {
+    public RatingAllPropertiesDto update(RatingDto rating, String id) throws ServiceException, RatingNotFoundException {
         LOGGER.info(format(UPDATE_RATING_BY_ID_MESSAGE, id));
 
         RatingEntity ratingToBeUpdated = modelMapper.map(rating,RatingEntity.class);
